@@ -22,6 +22,6 @@ class ContactController extends Controller
         'email' => $validatedData['email'],
         'feedback' => $validatedData['feedback'],
     ]);
-    return redirect('/books');
+    return redirect('/books/');
     }
 }

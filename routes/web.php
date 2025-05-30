@@ -3,15 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
+use App\Models\Book;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-//Route::get('/books', function (App\Models\Book $books) {
-//    return view('books.index', ['books' => $books]);
-//});
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 Route::get('/books/create', [BookController::class, 'create'])->name('books.create');
 Route::post('/books', [BookController::class, 'store'])->name('books.store');
@@ -23,3 +20,6 @@ Route::put('/books/{id}/update', [BookController::class, 'update'])->name('books
 Route::get('/contact', [ContactController::class, 'create'])->name('books.contact');
 Route::get('/contact/create', [ContactController::class, 'create'])->name('books.contact');
 Route::post('/books', [ContactController::class, 'store'])->name('books.store');
+
+Route::get('/books', function() { return view('books.index', ['books'=>Book::all()]); });
+

@@ -1,6 +1,9 @@
-<h1>Books</h1>
-<a href="/books/create">Create a book</a>
+
+<x-layout>
 <ul>
+    <x-slot:title>
+        Title thing
+    </x-slot>
     @foreach($books as $book)
         <li>
             <h2>{{ $book->title }}</h2>
@@ -11,4 +14,4 @@
         </li>
     @endforeach
 </ul>
-<a href="/contact">Contact us</a>
+</x-layout>

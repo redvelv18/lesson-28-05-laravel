@@ -1,3 +1,4 @@
+<x-layout>
 <form action="/books/{{ $book->id }}/destroy" method="post">
     @csrf
     @method('delete')
@@ -8,3 +9,4 @@
 <h3>{{ $book->author }}</h3>
 <p>{{ $book->released_at }}</p>
 <a href="/books">All books</a>
+</x-layout>

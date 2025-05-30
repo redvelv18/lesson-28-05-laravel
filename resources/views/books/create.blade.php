@@ -1,5 +1,5 @@
 <h1>New book</h1>
-    
+<x-layout>    
 <form action="/books" method="post">
     @csrf
     <div>
@@ -29,3 +29,4 @@
     <input type="submit" value="Create">
 </form>
 <a href="/books">All books</a>
+</x-layout>
