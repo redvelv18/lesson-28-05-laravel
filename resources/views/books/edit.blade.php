@@ -1,3 +1,4 @@
+<x-layout>
 <h1>Edit book</h1>
 
 <form action="/books/{{$editBook->id}}/update" method="post">
@@ -8,3 +9,4 @@
     <input type="date" name="released_at" value="{{$editBook->released_at}}">
     <input type="submit" value="Edit">
 </form>
+</x-layout>

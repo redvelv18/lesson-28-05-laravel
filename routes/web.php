@@ -22,4 +22,5 @@ Route::get('/contact/create', [ContactController::class, 'create'])->name('books
 Route::post('/books', [ContactController::class, 'store'])->name('books.store');
 
 Route::get('/books', function() { return view('books.index', ['books'=>Book::all()]); });
+Route::get('/about', [BookController::class, 'about'])->name('about');
 

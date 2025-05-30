@@ -1,3 +1,4 @@
+<x-layout>
 <h1>Contact form</h1>
 
 <form action="/books" method="post">
@@ -28,4 +29,4 @@
 
     <input type="submit" value="Submit">
 </form>
-<a href="/books">All books</a>
+</x-layout>
