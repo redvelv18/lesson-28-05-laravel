@@ -11,3 +11,4 @@
         </li>
     @endforeach
 </ul>
+<a href="/contact">Contact us</a>
